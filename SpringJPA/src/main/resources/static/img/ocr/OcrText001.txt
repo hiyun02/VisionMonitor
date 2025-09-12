@@ -1,0 +1,13 @@
+3.3. Process Control
+Process control must make computer-automated control avail-
+able in all areas on all processes. In addition, the tech-
+nology must expand the scope of conventional control to in-
+clude the following supporting goals:
+1.
+2.
+Minimize the manual entry and recording of all
+measurements and operational decisions to minimize
+errors and expedite data acquisition;
+Simplify the conducting of economic and operational
+studies to permit quick analysis of usual operating
+conditions ;

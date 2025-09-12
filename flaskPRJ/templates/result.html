@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>모니터링 결과 기록</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root{
+      --bg: #f4f6fa; --card: #ffffff; --ink: #1f2937; --muted: #64748b;
+      --line: #e5e7eb; --brand: #3b82f6; --pill: #e0e7ff; --pill-ink:#334155;
+    }
+    body{ background:var(--bg); color:var(--ink); }
+    .wrap{ max-width:760px; margin:24px auto; }
+    .pill-title{
+      background:var(--pill); color:var(--pill-ink);
+      padding:.75rem 1rem; border-radius:12px; font-weight:800; text-align:center;
+      border:1px solid var(--line); box-shadow:0 4px 10px rgba(2,6,23,.05);
+    }
+    .card-soft{
+      background:var(--card); border:1px solid var(--line); border-radius:12px;
+      box-shadow:0 6px 16px rgba(2,6,23,.06); padding:1.25rem 1.25rem 1rem;
+    }
+    .form-label{ font-weight:600; color:var(--muted); }
+    .form-control{ border-radius:10px; border-color:var(--line); background:#fff; }
+    /* 제출 버튼: 폼 폭 100%, 텍스트 가운데 */
+    .btn-submit{
+      width:100%; display:block; text-align:center;
+      background:var(--brand); color:#fff; border:none; border-radius:10px;
+      padding:.75rem 1.1rem; font-weight:700; letter-spacing:.2px;
+    }
+    .btn-submit:hover{ filter:brightness(.95); }
+    .small-note{ color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="pill-title mb-3">모니터링 결과</div>
+
+    <div class="card-soft">
+      <form method="post" action="">
+        <div class="mb-3">
+          <label class="form-label">모니터링 시작시각</label>
+          <input type="text" class="form-control" name="start_time" placeholder="예) 2025-09-11 14:50:12">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">모니터링 종료시각</label>
+          <input type="text" class="form-control" name="end_time" placeholder="예) 2025-09-11 16:50:24">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">총 모니터링 시간</label>
+          <input type="text" class="form-control" name="total_time" placeholder="예) 02:00:12">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">집중시간</label>
+          <input type="text" class="form-control" name="focus_time" placeholder="예) 01:21:19">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">가까움 누적시간</label>
+          <input type="text" class="form-control" name="near_time" placeholder="예) 00:15:23">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">졸음 누적시간</label>
+          <input type="text" class="form-control" name="sleep_time" placeholder="예) 00:27:10">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">휴식주기(분)</label>
+          <input type="text" class="form-control" name="rest_term_min" placeholder="예) 83">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">휴식시간(분)</label>
+          <input type="text" class="form-control" name="rest_time_min" placeholder="예) 16">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">총 방해시간</label>
+          <input type="text" class="form-control" name="distract_time" placeholder="예) 00:31:32">
+        </div>
+
+        <!-- 제출 버튼만 남김: 폼 폭 100% -->
+        <button type="submit" class="btn-submit">제출</button>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
